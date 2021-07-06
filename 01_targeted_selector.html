@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeted Selectors</title>
+    <style>
+        /* Direct Child */
+        div > p {
+            background: #ddd;
+        }
+
+        /* Directly After or Sibling */
+        div + p {
+            background: #333;
+        }
+
+        /* By Attributes */
+        a[target] {
+            background: red;
+        }
+
+        /* Specific Attributes Values */
+        input[type='email'],
+        input[type='text'],
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, distinctio!</p> <!-- Direct Child -->
+    
+
+        <ul>
+            <li>Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    
+    <p>Lorem ipsum dolor sit amet.</p> <!-- This is the Sibling -->
+
+    <a href="#">Page 1</a>
+    <a href="#" target="_blank">Page 2</a> <!-- Target Attributes -->
+    <a href="https://www.google.com/" target="_blank">Google</a> <!-- Target Attributes -->
+
+    <br><br>
+
+    <!-- Real Situation Sample -->
+    <form>
+        <input type="text" name="name" placeholder="Name"> <!-- Specified attributes-->
+        <input type="email" name="email" placeholder="Email"> <!-- Specified attributes-->
+        <textarea placeholder="You can do it!" id="sams" cols="30" rows="10"></textarea>
+        <input type="submit" value="Submit"> <!-- Specified attributes-->
+        
+    </form>
+    
+
+</body>
+</html>
